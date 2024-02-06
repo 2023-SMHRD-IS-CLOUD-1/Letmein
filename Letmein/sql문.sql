@@ -1,1 +1,1 @@
-select * from TB_USER
+select * from TB_POST
