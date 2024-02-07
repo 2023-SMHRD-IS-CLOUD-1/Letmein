@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.smhrd.model.MemberDTO;
+import com.smhrd.model.PostDTO;
 import com.smhrd.service.MemberService;
 import com.smhrd.service.PostService;
 import com.smhrd.service.StarService;
@@ -23,4 +24,15 @@ import com.smhrd.service.StarService;
 public class PostController {
 	@Resource
 	private PostService postService;
+	
+	@PostMapping("/post")
+	public void postUpdate(@RequestBody PostDTO dto) {
+		postService.postUpdate(dto);
+	}
+	@PostMapping("/selectAll")
+	public List<PostDTO> selectAll() {
+		List<PostDTO> all = postService.selectAll();
+		return all;
+	}
+	
 }

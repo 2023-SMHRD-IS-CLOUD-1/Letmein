@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.smhrd.db.PostMapper">
- 
+ 	<insert id="postUpdate" parameterType="com.smhrd.model.PostDTO">
+ 		INSERT INTO TB_POST (POST_TITLE, POST_CONTENT, POST_ACC, POST_TOP, POST_PANTS, POST_SHOE, USER_ID,POST_IMGSRC) 
+		VALUES (#{post_title}, #{post_content}, #{post_acc}, #{post_top}, #{post_pants}, #{post_shoe}, #{user_id}, #{post_imgsrc})
+ 	</insert>
+ 	<select id="selectAll" parameterType="com.smhrd.model.PostDTO" resultType="com.smhrd.model.PostDTO">
+ 		SELECT * FROM TB_POST
+ 	</select>
 </mapper>
