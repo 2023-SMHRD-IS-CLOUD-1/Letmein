@@ -12,11 +12,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.smhrd.model.MemberDTO;
 import com.smhrd.model.PostDTO;
-import com.smhrd.service.MemberService;
 import com.smhrd.service.PostService;
-import com.smhrd.service.StarService;
 
 
 
@@ -35,4 +32,14 @@ public class PostController {
 		return all;
 	}
 	
+	@PostMapping("/searchTitle")
+	public List<PostDTO> searchTitle(@RequestBody PostDTO dto){
+		List<PostDTO> all = postService.searchTitle(dto);
+		return all;
+	}
+	@PostMapping("/searchWriter")
+	public List<PostDTO> searchWriter(@RequestBody PostDTO dto){
+		List<PostDTO> all = postService.searchWriter(dto);
+		return all;
+	}
 }

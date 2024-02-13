@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.smhrd.db.AvatariMapper;
+import com.smhrd.db.AvatarMapper;
 import com.smhrd.db.LikeMapper;
 import com.smhrd.db.MemberMapper;
 import com.smhrd.db.PostMapper;
