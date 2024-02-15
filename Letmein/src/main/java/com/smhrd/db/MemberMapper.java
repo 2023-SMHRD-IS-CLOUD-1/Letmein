@@ -14,4 +14,6 @@ public interface MemberMapper {
 	public List<MemberDTO> MemberLogin(MemberDTO dto);
 
 	public int MemberChk(MemberDTO dto);
+
+	public List<MemberDTO> nickFind(MemberDTO dto);
 }

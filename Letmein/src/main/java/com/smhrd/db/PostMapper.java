@@ -19,4 +19,8 @@ public interface PostMapper {
 
 	public List<PostDTO> selectAll();
 
+	public void postDelete(PostDTO dto);
+
+	public void postModify(PostDTO dto);
+
 }

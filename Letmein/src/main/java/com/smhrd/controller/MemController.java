@@ -49,4 +49,10 @@ public class MemController {
 		int loginChk = memberService.MemberChk(dto);
 		return loginChk;
 	}
+	
+	@PostMapping("/nickFind")
+	public List<MemberDTO> nickFind(@RequestBody MemberDTO dto){
+		List<MemberDTO> nickList = memberService.nickFind(dto);
+		return nickList;
+	}
 }

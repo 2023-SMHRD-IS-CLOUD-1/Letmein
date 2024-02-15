@@ -26,5 +26,10 @@ public class MemberService {
 		return chk;
 	}
 
+	public List<MemberDTO> nickFind(MemberDTO dto) {
+		List<MemberDTO> member = memberMapper.nickFind(dto);
+		return member;
+	}
+
 	
 }

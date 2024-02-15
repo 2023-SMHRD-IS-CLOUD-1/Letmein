@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.smhrd.db.LikeMapper">
-  
+ 	<insert id="likePlus" parameterType="com.smhrd.model.LikeDTO">
+ 		INSERT INTO TB_LIKE (POST_LIKE_NUM, USER_ID, POST_LIKE) 
+ 		VALUES (#{post_like_num}, #{user_id}, 1)
+ 	</insert>
+ 	<delete id="unLike" parameterType="com.smhrd.model.LikeDTO">
+ 		DELETE FROM TB_LIKE WHERE POST_LIKE_NUM = #{post_like_num}
+ 	</delete>
+ 	<select id="countLike" parameterType="com.smhrd.model.LikeDTO" resultType="int">
+ 		SELECT COUNT(POST_LIKE) AS RESULT FROM TB_LIKE WHERE  POST_LIKE_NUM = #{post_like_num}
+ 	</select>
+ 	
+ 	<select id="countUser" parameterType="com.smhrd.model.LikeDTO" resultType="int">
+ 		SELECT POST_LIKE_NUM FROM TB_LIKE WHERE  USER_ID = #{user_id}
+ 	</select>
+ 	
 </mapper>

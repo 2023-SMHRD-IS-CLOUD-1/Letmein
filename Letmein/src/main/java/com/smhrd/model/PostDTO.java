@@ -1,17 +1,19 @@
 package com.smhrd.model;
 
+
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class PostDTO {
 	 // 글번호 
-    private Integer post_num;
-
-    // 글제목 
+	private Integer post_num;
+	
     private String post_title;
 
     // 글내용 
@@ -28,7 +30,6 @@ public class PostDTO {
 
     // 첨부사진 
     private String post_imgsrc;
-
     // 액세서리 
     private String post_acc;
 
@@ -40,4 +41,6 @@ public class PostDTO {
 
     // 신발 
     private String post_shoe;
+    
+   
 }
