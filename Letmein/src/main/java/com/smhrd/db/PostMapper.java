@@ -22,8 +22,9 @@ public interface PostMapper {
 	public void postDelete(PostDTO dto);
 
 	public void postModify(PostDTO dto);
+	
+	public List<PostDTO> searchMyPost(PostDTO dto);
 
 	public List<PostDTO> postNumFind(PostDTO dto);
 	
-	public List<PostDTO> searchMyPost(PostDTO dto);
 }

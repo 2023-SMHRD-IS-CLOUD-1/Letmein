@@ -69,4 +69,5 @@ public class MemController {
 	      int profileEditor = memberService.profileEditor(dto);
 	      return profileEditor;
 	   }
+	
 }
