@@ -55,4 +55,10 @@ public class MemController {
 		List<MemberDTO> nickList = memberService.nickFind(dto);
 		return nickList;
 	}
+	
+	@PostMapping("/profileEditor")
+	public int profileEditor(@RequestBody MemberDTO dto) {
+		int profileEditor = memberService.profileEditor(dto);
+		return profileEditor;
+	}
 }

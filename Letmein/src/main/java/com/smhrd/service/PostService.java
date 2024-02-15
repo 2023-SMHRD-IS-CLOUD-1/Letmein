@@ -67,7 +67,10 @@ public class PostService {
 		
 	}
 	
-
+	public List<PostDTO> searchMyPost(PostDTO dto) {
+		List<PostDTO> mypost = postMapper.searchMyPost(dto);
+		return mypost;
+	}
 
 	
 }

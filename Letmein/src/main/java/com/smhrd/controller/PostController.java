@@ -69,5 +69,11 @@ public class PostController {
 	public void postModify (@RequestBody PostDTO dto) {
 		postService.postModify(dto);
 	}
+	// 마이페이지 내가 게시한 게시물
+	@PostMapping("/mypost")
+	public List<PostDTO> myPost(@RequestBody PostDTO dto){
+		List<PostDTO> mypost = postService.searchMyPost(dto);
+		return mypost;
+	}
 		
 }

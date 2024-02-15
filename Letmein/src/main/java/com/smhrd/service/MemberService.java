@@ -31,5 +31,8 @@ public class MemberService {
 		return member;
 	}
 
-	
+	public int profileEditor(MemberDTO dto) {
+		int profileEditor = memberMapper.profileEditor(dto);
+		return profileEditor;
+	}
 }
