@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -39,9 +40,12 @@ public class MemController {
 
 	}
 	@PostMapping("/login")
-	public List<MemberDTO> login(@RequestBody MemberDTO dto) {
+	public List<MemberDTO> login(@RequestBody MemberDTO dto, HttpSession session) {
 		List<MemberDTO> loginList = memberService.MemberLogin(dto);
-		System.out.println(loginList);
+		if (loginList != null && !loginList.isEmpty()) {
+			session.setAttribute("loggedInUser", loginList.get(0));
+			return loginList;
+		}
 		return loginList;
 	}
 	@PostMapping("/loginChk")
@@ -55,4 +59,14 @@ public class MemController {
 		List<MemberDTO> nickList = memberService.nickFind(dto);
 		return nickList;
 	}
+	@PostMapping("/logout")
+	public boolean logout(HttpSession session) {
+		session.invalidate();
+		return true;
+	}
+	@PostMapping("/profileEditor")
+	   public int profileEditor(@RequestBody MemberDTO dto) {
+	      int profileEditor = memberService.profileEditor(dto);
+	      return profileEditor;
+	   }
 }

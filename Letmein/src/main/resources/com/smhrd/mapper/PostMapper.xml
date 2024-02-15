@@ -21,4 +21,17 @@
  		UPDATE TB_POST SET POST_TITLE=#{post_title}, POST_CONTENT = #{post_content}, POST_TOP = #{post_top}, POST_PANTS = #{post_pants},
  		POST_ACC = #{post_acc} , POST_SHOE = #{post_shoe} WHERE POST_NUM = #{post_num}
  	</update>
+ 	<select id="postNumFind" parameterType="com.smhrd.model.PostDTO" resultType="com.smhrd.model.PostDTO">
+ 		SELECT * FROM TB_POST WHERE POST_NUM = #{post_num}
+ 	</select>
+ 	<select id="searchMyPost" parameterType="com.smhrd.model.PostDTO" resultType="com.smhrd.model.PostDTO">
+       SELECT A.* FROM (
+          SELECT T.*, ROWNUM AS RN FROM (
+              SELECT * FROM TB_POST WHERE USER_ID = #{user_id} ORDER BY POST_AT DESC
+          ) T
+          WHERE ROWNUM &lt;= #{page_number} * 10
+      ) A
+      WHERE RN &gt; (#{page_number} - 1) * 10
+
+    </select>
 </mapper>

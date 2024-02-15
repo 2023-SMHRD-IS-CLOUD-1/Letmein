@@ -16,4 +16,6 @@ public interface MemberMapper {
 	public int MemberChk(MemberDTO dto);
 
 	public List<MemberDTO> nickFind(MemberDTO dto);
+	
+	public int profileEditor(MemberDTO dto);
 }

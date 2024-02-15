@@ -42,7 +42,8 @@ public class PostController {
 	// 게시글 조회
 	@GetMapping("/selectAll")
 	public List<Post> getTestDomainList(Pageable pageable){
-		return postService.getPageList(pageable);
+		List<Post> post = postService.getPageList(pageable);
+		return post;
 	}
 	// 제목기준 검색
 	@GetMapping("/searchTitle")
@@ -69,5 +70,18 @@ public class PostController {
 	public void postModify (@RequestBody PostDTO dto) {
 		postService.postModify(dto);
 	}
+	// 게시글 번호 기준 조회
+	@PostMapping("/postNumFind")
+	public List<PostDTO> postNumFind (@RequestBody PostDTO dto) {
+		List<PostDTO> result = postService.postNumFind(dto);
+		return result;
+	}
+	// 마이페이지 내가 게시한 게시물
+	   @PostMapping("/mypost")
+	   public List<PostDTO> myPost(@RequestBody PostDTO dto){
+	      List<PostDTO> mypost = postService.searchMyPost(dto);
+	      System.out.println(mypost);
+	      return mypost;
+	   }
 		
 }

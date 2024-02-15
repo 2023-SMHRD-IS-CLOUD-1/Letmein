@@ -42,5 +42,7 @@ public class PostDTO {
     // 신발 
     private String post_shoe;
     
+    // 페이지네이션
+    private int page_number;
    
 }

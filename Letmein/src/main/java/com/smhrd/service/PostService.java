@@ -66,8 +66,16 @@ public class PostService {
 		postMapper.postModify(dto);
 		
 	}
-	
 
+	public List<PostDTO> postNumFind(PostDTO dto) {
+		List<PostDTO> result = postMapper.postNumFind(dto);
+		return result;
+	}
+	
+	public List<PostDTO> searchMyPost(PostDTO dto) {
+	      List<PostDTO> mypost = postMapper.searchMyPost(dto);
+	      return mypost;
+	   }
 
 	
 }

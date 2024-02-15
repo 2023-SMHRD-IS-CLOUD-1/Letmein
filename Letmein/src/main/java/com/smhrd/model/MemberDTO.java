@@ -18,4 +18,5 @@ public class MemberDTO {
 	//private Date user_date;
 	private String user_type;
 	private String user_role;
+	
 }

@@ -9,6 +9,7 @@ import com.smhrd.db.AvatarMapper;
 import com.smhrd.db.LikeMapper;
 import com.smhrd.db.MemberMapper;
 import com.smhrd.db.PostMapper;
+import com.smhrd.entity.Post;
 import com.smhrd.model.LikeDTO;
 import com.smhrd.model.MemberDTO;
 import com.smhrd.model.PostDTO;
@@ -17,7 +18,6 @@ public class LikeService {
 	
 	@Autowired
 	private LikeMapper likeMapper;
-
 
 	public void likePlus(LikeDTO dto) {
 		likeMapper.likePlus(dto);
@@ -40,6 +40,8 @@ public class LikeService {
 		List<LikeDTO> count = likeMapper.countUser(dto);
 		return count;
 	}
+
+
 
 
 	
