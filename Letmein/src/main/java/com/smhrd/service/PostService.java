@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.smhrd.db.PostMapper;
 import com.smhrd.entity.Post;
+import com.smhrd.model.LikeDTO;
 import com.smhrd.model.PostDTO;
 import com.smhrd.repository.PostRepository;
 
@@ -76,6 +77,27 @@ public class PostService {
 	      List<PostDTO> mypost = postMapper.searchMyPost(dto);
 	      return mypost;
 	   }
+
+	public List<PostDTO> sortLike() {
+		List<PostDTO> sortLike = postMapper.sortLike();
+		return sortLike;
+	}
+
+	public List<PostDTO> sortWriter(PostDTO dto) {
+		List<PostDTO> writer = postMapper.sortWriter(dto);
+		return writer;
+	}
+
+	public List<PostDTO> sortTitle(PostDTO dto) {
+		List<PostDTO> title = postMapper.sortTitle(dto);
+		return title;
+	}
+
+	public List<PostDTO> myLike(String user_id) {
+		List<PostDTO> like = postMapper.myLike(user_id);
+		return like;
+	}
+
 
 	
 }

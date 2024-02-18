@@ -4,6 +4,8 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.IdClass;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
@@ -20,10 +22,10 @@ import lombok.Setter;
 public class Like {
 	@Id
 	@Column(name="post_like_num", columnDefinition = "INT")
-	private Integer post;
+	private Integer post_like_num;
 	
 	@Column(name="post_num", columnDefinition = "INT")
-	private Integer postNum;
+	private Integer post_num;
 	
 	@Column(name="user_id", columnDefinition = "VARCHAR2(20)")
 	private String userId;

@@ -21,6 +21,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.smhrd.entity.Post;
+import com.smhrd.model.LikeDTO;
 import com.smhrd.model.PostDTO;
 import com.smhrd.model.ResponseDTO;
 import com.smhrd.repository.PostRepository;
@@ -80,9 +81,39 @@ public class PostController {
 	   @PostMapping("/mypost")
 	   public List<PostDTO> myPost(@RequestBody PostDTO dto){
 	      List<PostDTO> mypost = postService.searchMyPost(dto);
-	      System.out.println(mypost);
 	      return mypost;
 	   }
-
+	   
+	 // 인기순 정렬
+	   @GetMapping ("/sortLike")
+	   public List<PostDTO> sortLike(){
+		   List<PostDTO> like = postService.sortLike();
+		   return like;
+	   }
+	   
+	   // 인기순 정렬 후 작성자 검색
+	   @PostMapping("/sortWriter")
+	   public List<PostDTO> sortWriter(@RequestBody PostDTO dto) {
+		   System.out.println(dto);
+		   List<PostDTO> writer = postService.sortWriter(dto);
+		   System.out.println(writer);
+		   return writer;
+	   }
+	   
+	   // 인기순 정렬 후 제목 검색
+	   @PostMapping("/sortTitle")
+	   public List<PostDTO> sortTitle(@RequestBody PostDTO dto){
+		   List<PostDTO> title = postService.sortTitle(dto);
+		   return title;
+	   }
+	   
+	   // 좋아요 누른 글 조회
+	   @GetMapping("/myLike")
+	   public List<PostDTO> myLike(@RequestParam String user_id){
+		   System.out.println(user_id);
+		   List<PostDTO> like = postService.myLike(user_id);
+		   return like;
+	   }
+	 
 		
 }

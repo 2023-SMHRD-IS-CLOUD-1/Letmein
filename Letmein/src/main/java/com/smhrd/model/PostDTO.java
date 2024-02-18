@@ -44,5 +44,6 @@ public class PostDTO {
     
     // 페이지네이션
     private int page_number;
+    
    
 }

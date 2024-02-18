@@ -1,37 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.smhrd.db.PostMapper">
+	
+	<!-- 커뮤니티 글 등록 -->
  	<insert id="postUpdate" parameterType="com.smhrd.model.PostDTO">
  		INSERT INTO TB_POST (POST_TITLE, POST_CONTENT, POST_ACC, POST_TOP, POST_PANTS, POST_SHOE, USER_ID,POST_IMGSRC) 
 		VALUES (#{post_title}, #{post_content}, #{post_acc}, #{post_top}, #{post_pants}, #{post_shoe}, #{user_id}, #{post_imgsrc})
  	</insert>
+ 	<!-- 커뮤니티 글 전체 -->
 	 <select id="selectAll" resultType="com.smhrd.model.PostDTO">
         SELECT * FROM TB_POST
     </select>
+    <!-- 제목 기준 검색 (최신순) -->
  	<select id="searchTitle" parameterType="com.smhrd.model.PostDTO" resultType="com.smhrd.model.PostDTO">
  		SELECT * FROM TB_POST WHERE POST_TITLE LIKE '%' || #{post_title} || '%'
  	</select>
+ 	<!-- 작성자 기준 검색 (최신순) -->
  	<select id="searchWriter" parameterType="com.smhrd.model.PostDTO" resultType="com.smhrd.model.PostDTO">
  		SELECT * FROM TB_POST WHERE USER_ID LIKE '%' || #{user_id} || '%'
  	</select>
+ 	<!-- 커뮤니티 글 삭제 -->
  	<delete id="postDelete" parameterType="com.smhrd.model.PostDTO">
  		DELETE FROM TB_POST WHERE POST_NUM = #{post_num}
  	</delete>
+ 	<!-- 커뮤니티 글 수정 -->
  	<update id="postModify" parameterType="com.smhrd.model.PostDTO" >
  		UPDATE TB_POST SET POST_TITLE=#{post_title}, POST_CONTENT = #{post_content}, POST_TOP = #{post_top}, POST_PANTS = #{post_pants},
  		POST_ACC = #{post_acc} , POST_SHOE = #{post_shoe} WHERE POST_NUM = #{post_num}
  	</update>
+ 	<!-- 글 번호 기준 조회 -->
  	<select id="postNumFind" parameterType="com.smhrd.model.PostDTO" resultType="com.smhrd.model.PostDTO">
  		SELECT * FROM TB_POST WHERE POST_NUM = #{post_num}
  	</select>
+ 	<!-- 내가 작성한 글 조회 -->
  	<select id="searchMyPost" parameterType="com.smhrd.model.PostDTO" resultType="com.smhrd.model.PostDTO">
-       SELECT A.* FROM (
-          SELECT T.*, ROWNUM AS RN FROM (
-              SELECT * FROM TB_POST WHERE USER_ID = #{user_id} ORDER BY POST_AT DESC
-          ) T
-          WHERE ROWNUM &lt;= #{page_number} * 10
-      ) A
-      WHERE RN &gt; (#{page_number} - 1) * 10
-
+      SELECT * FROM TB_POST WHERE USER_ID = #{user_id}
     </select>
+ 	<!-- 인기순 전체글  -->
+	 <select id="sortLike" resultType="com.smhrd.model.PostDTO">
+	  SELECT B.POST_NUM, B.POST_TITLE, B.POST_CONTENT, B.USER_ID, B.POST_IMGSRC, B.POST_ACC, B.POST_TOP, B.POST_PANTS, B.POST_SHOE, NVL(A.cn, 0) AS LIKE_COUNT
+		FROM TB_POST B
+		LEFT JOIN (
+		    SELECT post_num, COUNT(*) AS cn
+		    FROM TB_LIKE
+		    GROUP BY post_num
+		) A ON B.POST_NUM = A.post_num
+		ORDER BY LIKE_COUNT DESC
+	</select>
+	<!-- 작성자 기준 검색 (인기순) -->
+	<select id="sortWriter" parameterType="com.smhrd.model.PostDTO" resultType="com.smhrd.model.PostDTO">
+	  SELECT B.POST_NUM, B.POST_TITLE, B.POST_CONTENT, B.USER_ID, B.POST_IMGSRC, B.POST_ACC, B.POST_TOP, B.POST_PANTS, B.POST_SHOE, NVL(A.cn, 0) AS LIKE_COUNT
+		FROM TB_POST B
+		LEFT JOIN (
+		    SELECT post_num, COUNT(*) AS cn
+		    FROM TB_LIKE
+		    GROUP BY post_num
+		) A ON B.POST_NUM = A.post_num
+		WHERE USER_ID = #{user_id}
+		ORDER BY LIKE_COUNT DESC
+	</select>
+	<!-- 제목 기준 검색 (인기순) -->
+	 <select id="sortTitle" parameterType="com.smhrd.model.PostDTO" resultType="com.smhrd.model.PostDTO">
+	 	SELECT B.POST_NUM, B.POST_TITLE, B.POST_CONTENT, B.USER_ID, B.POST_IMGSRC, B.POST_ACC, B.POST_TOP, B.POST_PANTS, B.POST_SHOE, NVL(A.cn, 0) AS LIKE_COUNT
+		FROM TB_POST B
+		LEFT JOIN (
+			 SELECT post_num, COUNT(*) AS cn
+			 FROM TB_LIKE
+			 GROUP BY post_num
+		) A ON B.POST_NUM = A.post_num
+		WHERE POST_TITLE = #{post_title}
+		ORDER BY LIKE_COUNT DESC
+	 </select>
+	 
+	 <!-- 좋아요 누른 글 조회 -->
+	 <select id="myLike" parameterType="String" resultType="com.smhrd.model.PostDTO">
+	 	SELECT B.*
+		FROM TB_POST B
+		LEFT JOIN TB_LIKE A ON B.POST_NUM = A.POST_NUM
+		WHERE B.USER_ID = #{user_id}
+		AND A.USER_ID = #{user_id}
+	 </select>
 </mapper>

@@ -6,6 +6,7 @@ import org.apache.ibatis.annotations.Mapper;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
+import com.smhrd.model.LikeDTO;
 import com.smhrd.model.PostDTO;
 
 @Mapper
@@ -26,5 +27,13 @@ public interface PostMapper {
 	public List<PostDTO> searchMyPost(PostDTO dto);
 
 	public List<PostDTO> postNumFind(PostDTO dto);
+
+	public List<PostDTO> sortLike();
+
+	public List<PostDTO> sortWriter(PostDTO dto);
+
+	public List<PostDTO> sortTitle(PostDTO dto);
+
+	public List<PostDTO> myLike(String user_id);
 	
 }

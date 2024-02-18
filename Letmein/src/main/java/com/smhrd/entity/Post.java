@@ -1,9 +1,14 @@
 package com.smhrd.entity;
 
+import java.io.Serializable;
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
@@ -45,4 +50,6 @@ public class Post {
 	
 	@Column(name="post_shoe",columnDefinition = "VARCHAR2(1000)")
 	private String postShoe;
+	
+	
 }
