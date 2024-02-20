@@ -6,6 +6,7 @@ import java.util.List;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
 
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -24,14 +25,7 @@ import com.smhrd.service.MemberService;
 public class MemController {
 	@Resource
 	private MemberService memberService;
-	// React <---> Spring : 비동기 요청, 응답을 이용해서 구현
-	// Spring Boot 역할 --> 요청을 받았을 때, 특정 데이터를 응답하는 형식
-	// Rest API Server : 요청이 들어왔을 때, 알맞은 데이터를 응답하는 서버
-	
-	// info라는 요청이 들어왔을 때, 학생목록을 응답하는 기능
-	
-	// test 라는 요청이 들어왔을 때.
-	// "Hello world"를 응답하려면
+
 	@PostMapping("/join")
 	public void join(@RequestBody MemberDTO dto) {
 		memberService.MemberJoin(dto);
@@ -39,6 +33,7 @@ public class MemController {
 		System.out.println(dto);
 
 	}
+	
 	@PostMapping("/login")
 	public List<MemberDTO> login(@RequestBody MemberDTO dto, HttpSession session) {
 		List<MemberDTO> loginList = memberService.MemberLogin(dto);
@@ -48,6 +43,7 @@ public class MemController {
 		}
 		return loginList;
 	}
+	
 	@PostMapping("/loginChk")
 	public int loginChk(@RequestBody MemberDTO dto) {
 		int loginChk = memberService.MemberChk(dto);
@@ -59,6 +55,7 @@ public class MemController {
 		List<MemberDTO> nickList = memberService.nickFind(dto);
 		return nickList;
 	}
+	
 	@PostMapping("/logout")
 	public boolean logout(HttpSession session) {
 		session.invalidate();
@@ -70,4 +67,21 @@ public class MemController {
 	      return profileEditor;
 	   }
 	
+	@GetMapping("/allUser")
+	public List<MemberDTO> allUser() {
+		List<MemberDTO> member = memberService.allUser();
+		return member;
+	}
+	
+	@PostMapping("/UserSearch")
+	public List<MemberDTO> UserSearch(@RequestBody MemberDTO dto) {
+		List<MemberDTO> user = memberService.UserSearch(dto);
+		return user;
+	}
+	
+	// 관리자 -> 회원 탈퇴
+	@PostMapping("/AdminDelete")
+	public void AdminDelete(@RequestBody MemberDTO dto) {
+		memberService.AdminDelete(dto);
+	}
 }

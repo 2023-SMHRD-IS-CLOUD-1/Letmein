@@ -35,4 +35,18 @@ public class MemberService {
 	      int profileEditor = memberMapper.profileEditor(dto);
 	      return profileEditor;
 	   }
+
+	public List<MemberDTO> allUser() {
+		List<MemberDTO> member = memberMapper.allUser();
+		return member;
+	}
+
+	public List<MemberDTO> UserSearch(MemberDTO dto) {
+		List<MemberDTO> member = memberMapper.UserSearch(dto);
+		return member;
+	}
+
+	public void AdminDelete(MemberDTO dto) {
+		memberMapper.AdminDelete(dto);
+	}
 }

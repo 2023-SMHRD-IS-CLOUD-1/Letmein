@@ -14,5 +14,9 @@ public interface HelpMapper {
 	List<HelpDTO> customerNum(HelpDTO dto);
 	// 문의글 작성
 	void customerPost(HelpDTO dto);
+	
+	List<HelpDTO> helpNo();
+	
+	void helpAnswer(HelpDTO dto);
 
 }

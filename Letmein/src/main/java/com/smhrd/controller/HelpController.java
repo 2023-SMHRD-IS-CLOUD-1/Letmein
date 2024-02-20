@@ -36,4 +36,16 @@ public class HelpController {
 	private void customerPost(@RequestBody HelpDTO dto){
 		 helpService.customerPost(dto);
 	}
+	
+	@GetMapping("/helpNo")
+	private List<HelpDTO> helpNo(){
+		List<HelpDTO> list = helpService.helpNo();
+		return list;
+	}
+	
+	// 문의글 답변 작성
+	@PostMapping("/helpAnswer")
+	private void helpAnswer(@RequestBody HelpDTO dto){
+		helpService.helpAnswer(dto);
+	}
 }

@@ -28,4 +28,14 @@ public class HelpService {
 	public void customerPost(HelpDTO dto) {
 		helpMapper.customerPost(dto);
 	}
+	
+	// 관리자 페이지 - 답변 안된거
+	public List<HelpDTO> helpNo() {
+		List<HelpDTO> list = helpMapper.helpNo();
+		return list;
+	}
+	public void helpAnswer(HelpDTO dto) {
+		helpMapper.helpAnswer(dto);
+	}
+	
 }

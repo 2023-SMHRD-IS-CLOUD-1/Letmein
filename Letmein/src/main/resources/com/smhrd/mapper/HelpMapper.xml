@@ -16,4 +16,16 @@
 		INSERT INTO TB_HELP (HELP_TITLE, HELP_CONTENT, HELP_ANSWER, USER_ID) 
 		VALUES (#{help_title}, #{help_content}, 'N',#{user_id}) 
 	</insert>
+	
+	<!-- 관리자 페이지 -->
+	<select id="helpNo" resultType="com.smhrd.model.HelpDTO">
+		SELECT * FROM TB_HELP WHERE HELP_ANSWER = 'N'
+	</select>
+	
+	<!-- 관리자 답변 등록 -->
+	<update id="helpAnswer" parameterType="com.smhrd.model.HelpDTO"> 
+		UPDATE TB_HELP
+		SET HELP_ANSWER_CONTENT = #{help_answer_content}, HELP_ANSWER = 'Y'
+		WHERE HELP_NUM = #{help_num}
+	</update>
 </mapper>

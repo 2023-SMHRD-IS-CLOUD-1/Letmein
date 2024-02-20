@@ -27,4 +27,16 @@
        USER_EMAIL = #{user_email}
    WHERE USER_ID = #{user_id}
   </update>
+  
+  <select id="allUser" resultType="com.smhrd.model.MemberDTO">
+  	SELECT * FROM TB_USER
+  </select>
+  
+  <select id="UserSearch" parameterType="com.smhrd.model.MemberDTO" resultType="com.smhrd.model.MemberDTO">
+  	SELECT * FROM TB_USER WHERE USER_ID = #{user_id}
+  </select>
+  
+  <delete id="AdminDelete" parameterType="com.smhrd.model.MemberDTO">
+  	DELETE FROM TB_USER WHERE USER_ID = #{user_id}
+  </delete>
 </mapper>
