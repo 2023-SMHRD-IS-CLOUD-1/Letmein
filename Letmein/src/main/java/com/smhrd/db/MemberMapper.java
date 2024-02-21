@@ -24,4 +24,6 @@ public interface MemberMapper {
 	public List<MemberDTO> UserSearch(MemberDTO dto);
 
 	public void AdminDelete(MemberDTO dto);
+
+	public List<MemberDTO> FindEmail(MemberDTO dto);
 }

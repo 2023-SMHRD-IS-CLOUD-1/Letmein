@@ -7,10 +7,10 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class AavatarDTO {
+public class AvatarDTO {
 
 	private int avatar_num;
-	private String avatar_name;
+	private String avatar_gender;
 	private String avatar_type;
 	private String avatar_imgsrc;
 }

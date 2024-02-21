@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.annotation.Resource;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -13,6 +14,7 @@ import com.smhrd.model.HelpDTO;
 import com.smhrd.service.HelpService;
 
 @RestController
+@CrossOrigin(origins = "*")
 public class HelpController {
 	@Resource
 	HelpService helpService;

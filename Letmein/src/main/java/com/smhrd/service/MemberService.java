@@ -49,4 +49,9 @@ public class MemberService {
 	public void AdminDelete(MemberDTO dto) {
 		memberMapper.AdminDelete(dto);
 	}
+
+	public List<MemberDTO> FindEmail(MemberDTO dto) {
+		List<MemberDTO> list = memberMapper.FindEmail(dto);
+		return list;
+	}
 }

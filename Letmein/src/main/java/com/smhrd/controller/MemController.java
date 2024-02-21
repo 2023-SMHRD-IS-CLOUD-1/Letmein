@@ -6,6 +6,7 @@ import java.util.List;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -22,6 +23,7 @@ import com.smhrd.service.MemberService;
 // @Restcontroller : 비동기 통신
 
 @RestController
+@CrossOrigin(origins = "*")
 public class MemController {
 	@Resource
 	private MemberService memberService;
@@ -35,12 +37,11 @@ public class MemController {
 	}
 	
 	@PostMapping("/login")
-	public List<MemberDTO> login(@RequestBody MemberDTO dto, HttpSession session) {
+	public List<MemberDTO> login(@RequestBody MemberDTO dto) {
+		System.out.println("실행");
+		System.out.println(dto);
 		List<MemberDTO> loginList = memberService.MemberLogin(dto);
-		if (loginList != null && !loginList.isEmpty()) {
-			session.setAttribute("loggedInUser", loginList.get(0));
-			return loginList;
-		}
+		System.out.println(loginList);
 		return loginList;
 	}
 	
@@ -84,4 +85,12 @@ public class MemController {
 	public void AdminDelete(@RequestBody MemberDTO dto) {
 		memberService.AdminDelete(dto);
 	}
+	
+	// 아이디 찾기 - 이메일
+	@PostMapping("/FindEmail")
+	public List<MemberDTO> FindEmail (@RequestBody MemberDTO dto) {
+		List<MemberDTO> list = memberService.FindEmail(dto);
+		return list;
+	}
+	
 }

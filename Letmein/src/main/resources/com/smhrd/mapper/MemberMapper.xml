@@ -39,4 +39,9 @@
   <delete id="AdminDelete" parameterType="com.smhrd.model.MemberDTO">
   	DELETE FROM TB_USER WHERE USER_ID = #{user_id}
   </delete>
+  
+  <select id="FindEmail" parameterType="com.smhrd.model.MemberDTO" resultType="com.smhrd.model.MemberDTO">
+  	SELECT USER_EMAIL FROM TB_USER WHERE USER_ID = #{user_id}
+  </select>
+  
 </mapper>

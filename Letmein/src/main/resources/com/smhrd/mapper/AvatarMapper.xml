@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.smhrd.db.AvatarMapper">
-
+	<select id="avatar" parameterType="com.smhrd.model.AvatarDTO" resultType="com.smhrd.model.AvatarDTO">
+		SELECT * FROM TB_AVATAR WHERE AVATAR_GENDER = #{avatar_gender}
+	</select>
 </mapper>
