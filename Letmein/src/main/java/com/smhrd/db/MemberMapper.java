@@ -11,7 +11,7 @@ public interface MemberMapper {
 
 	public void MemberJoin(MemberDTO dto);
 
-	public List<MemberDTO> MemberLogin(MemberDTO dto);
+	public MemberDTO MemberLogin(MemberDTO dto);
 
 	public int MemberChk(MemberDTO dto);
 

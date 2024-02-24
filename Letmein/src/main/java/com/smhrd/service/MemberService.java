@@ -16,8 +16,8 @@ public class MemberService {
 		memberMapper.MemberJoin(dto);
 	}
 
-	public List<MemberDTO> MemberLogin(MemberDTO dto) {
-		List<MemberDTO> member =  memberMapper.MemberLogin(dto);
+	public MemberDTO MemberLogin(MemberDTO dto) {
+		MemberDTO member =  memberMapper.MemberLogin(dto);
 		return member;
 	}
 	

@@ -30,9 +30,7 @@ public class CodiController {
 	
 	@PostMapping("/codiTop")
 	private List<CodiDTO> codiTop(@RequestBody CodiDTO dto){
-		System.out.println(dto);
 	 List<CodiDTO> list = codiService.codiTop(dto);
-	 System.out.println(list);
 	 return list;
 	}
 	

@@ -27,6 +27,7 @@ public class PostService {
 	private PostMapper postMapper;
 	@Autowired
 	private PostRepository postRepository;
+	
 	public void postUpdate(PostDTO dto) {
 		postMapper.postUpdate(dto);
 	}
@@ -48,14 +49,14 @@ public class PostService {
 	
 	
 	@Transactional
-	public Page<Post> searchTitle(String postTitle, Pageable pageable){
-		Page<Post> postList = postRepository.findByPostTitleContaining(postTitle, pageable);
+	public List<Post> searchTitle(String postTitle){
+		List<Post> postList = postRepository.findByPostTitleContaining(postTitle);
 		return postList;
 	}
 	
 	@Transactional
-	public Page<Post> searchWriter(String userId, Pageable pageable){
-		Page<Post> postList = postRepository.findByUserIdContaining(userId, pageable);
+	public List<Post> searchWriter(String userId){
+		List<Post> postList = postRepository.findByUserIdContaining(userId);
 		return postList;
 	}
 

@@ -14,11 +14,10 @@ import com.smhrd.entity.Post;
 import com.smhrd.model.PostDTO;
 @Repository
 public interface PostRepository extends JpaRepository<Post, Integer> {
-		public List<Post> findAllByOrderByPostNumDesc(Pageable pageable);
-		public Page<Post> findByPostTitleContaining(String postTitle, Pageable pageable);
-		public Page<Post> findByUserIdContaining(String UserId, Pageable pageable);
-		public Page<Post> findByUserId(String userId, Pageable pageable);
-		
+      public List<Post> findAllByOrderByPostNumDesc(Pageable pageable);
+      public List<Post> findByPostTitleContaining(String postTitle);
+      public List<Post> findByUserIdContaining(String UserId);
+      public Page<Post> findByUserId(String userId, Pageable pageable);
+      
 
 }
-

@@ -50,18 +50,15 @@ public class PostController {
 	}
 	// 제목기준 검색
 	@GetMapping("/searchTitle")
-	public List<Post> searchTitle(String postTitle,Pageable pageable){
-		Page<Post> searchPage = postService.searchTitle(postTitle, pageable);
-		List<Post> searchList = searchPage.getContent();
-		System.out.println(searchList);
+	public List<Post> searchTitle(String postTitle){
+		List<Post> searchList = postService.searchTitle(postTitle);
 		return searchList;
 	}
 	// 작성자 기준 검색
 	@GetMapping("/searchWriter")
-	public List<Post> searchWriter(String userId, Pageable pageable){
-		Page<Post> searchPage = postService.searchWriter(userId, pageable);
-		List<Post> searchList = searchPage.getContent();
-		return searchList;
+	public List<Post> searchWriter(String userId){
+		List<Post> searchPage = postService.searchWriter(userId);
+		return searchPage;
 	}
 	// 게시글 삭제
 	@PostMapping("/postDelete")

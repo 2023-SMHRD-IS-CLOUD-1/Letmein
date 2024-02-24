@@ -6,6 +6,9 @@ import java.util.List;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.data.redis.RedisProperties.Lettuce.Cluster.Refresh;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -27,22 +30,23 @@ import com.smhrd.service.MemberService;
 public class MemController {
 	@Resource
 	private MemberService memberService;
-
+	
+	@Autowired
+	PasswordEncoder passwordEncoder;
+	
 	@PostMapping("/join")
 	public void join(@RequestBody MemberDTO dto) {
+		dto.incode(dto.getUser_pw());
 		memberService.MemberJoin(dto);
-		System.out.println("실행");
-		System.out.println(dto);
-
 	}
 	
 	@PostMapping("/login")
-	public List<MemberDTO> login(@RequestBody MemberDTO dto) {
-		System.out.println("실행");
-		System.out.println(dto);
-		List<MemberDTO> loginList = memberService.MemberLogin(dto);
-		System.out.println(loginList);
-		return loginList;
+	public MemberDTO login(@RequestBody MemberDTO dto) {
+		MemberDTO login = memberService.MemberLogin(dto);
+		if(login != null && passwordEncoder.matches(dto.getUser_pw(), login.getUser_pw())) {
+			return login;
+		}
+		return null;
 	}
 	
 	@PostMapping("/loginChk")

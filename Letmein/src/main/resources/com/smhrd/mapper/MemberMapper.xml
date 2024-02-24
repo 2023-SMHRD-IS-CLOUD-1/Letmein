@@ -6,7 +6,7 @@
   </insert>
   
   <select id="MemberLogin" parameterType="com.smhrd.model.MemberDTO" resultType="com.smhrd.model.MemberDTO">
-  SELECT USER_ID,USER_PW,USER_NAME,USER_EMAIL, USER_NICK
+  SELECT *
   FROM TB_USER 
   WHERE USER_ID=#{user_id}
   </select>
