@@ -43,5 +43,8 @@
   <select id="FindEmail" parameterType="com.smhrd.model.MemberDTO" resultType="com.smhrd.model.MemberDTO">
   	SELECT USER_EMAIL FROM TB_USER WHERE USER_ID = #{user_id}
   </select>
+  <select id="sessionLogin" parameterType="com.smhrd.model.MemberDTO" resultType="com.smhrd.model.MemberDTO">
+  	SELECT * FROM TB_USER WHERE USER_ID = #{user_id}
+  </select>
   
 </mapper>

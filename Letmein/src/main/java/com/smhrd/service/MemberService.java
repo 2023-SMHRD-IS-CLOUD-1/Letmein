@@ -54,4 +54,9 @@ public class MemberService {
 		List<MemberDTO> list = memberMapper.FindEmail(dto);
 		return list;
 	}
+
+	public List<MemberDTO> sessionLogin(MemberDTO dto) {
+		List<MemberDTO> sessionLogin = memberMapper.sessionLogin(dto);
+		return sessionLogin;
+	}
 }

@@ -97,4 +97,11 @@ public class MemController {
 		return list;
 	}
 	
+	// 로그인 세션
+	@PostMapping("/sessionLogin")
+	public List<MemberDTO> sessionLogin(@RequestBody MemberDTO dto) {
+		List<MemberDTO> sessionLogin = memberService.sessionLogin(dto);
+		return sessionLogin;
+	}
+	
 }
