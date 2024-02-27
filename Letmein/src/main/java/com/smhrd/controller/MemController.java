@@ -100,6 +100,8 @@ public class MemController {
 	// 로그인 세션
 	@PostMapping("/sessionLogin")
 	public List<MemberDTO> sessionLogin(@RequestBody MemberDTO dto) {
+		System.out.println(dto.getUser_id());
+		System.out.println("세션요청");
 		List<MemberDTO> sessionLogin = memberService.sessionLogin(dto);
 		return sessionLogin;
 	}
