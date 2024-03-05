@@ -122,7 +122,6 @@ https://news.unn.net/news/articleView.html?idxno=543278
 | fullcanlendar와 faltpickr API를 <br>이용한 예약관리 기능                                                                                                                                       | Flask 서버 구축                                                                                                          | 마이페이지                                                                               | 회원가입서비스                                                                                                     | 시연영상                                                                                                              | api 수집                                                                                 |
 | 리뷰기능                                                                                                                                                                                   | Python 라이브러리 활용 및 <br>알고리즘 구현                                                                                                                         | 가게등록페이지                                                                           | 산출물작성                                                                                                         |                                                                                                                       | 리뷰기능 디자인                                                                          |
 
-||||
 
 # 11. 트러블 슈팅
 
