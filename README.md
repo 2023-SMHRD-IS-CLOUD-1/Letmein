@@ -124,9 +124,9 @@ https://news.unn.net/news/articleView.html?idxno=543278
 # 11. 링크
 |                     이름 | 설명                                                              | 링크                                                                |
 |-------------------------:|-------------------------------------------------------------------:|-------------------------------------------------------------------|
-| Letmein                  | Spring Boot                                                     |                                                                    |
-| Letmein-Front            | React                                                           |                                                                    |
-| Letmein-Flask            | Flask                                                           |                                                                   |
+| Letmein                  | Spring Boot  |      https://github.com/2023-SMHRD-IS-CLOUD-1/Letmein/tree/main                                                              |
+| Letmein-Front            | React           |     https://github.com/2023-SMHRD-IS-CLOUD-1/Letmein-front                                                               |
+| Letmein-Flask            | Flask            |    https://github.com/2023-SMHRD-IS-CLOUD-1/Letmein-Flask                                                               |
 
 
 
