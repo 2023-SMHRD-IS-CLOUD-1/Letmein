@@ -39,7 +39,7 @@
 | DB  | <img src="https://img.shields.io/badge/Oracle-F80000?style=for-the-badge&logo=oracle&logoColor=black" />|
 | Collaboration |<img src="https://bookface-images.s3.amazonaws.com/logos/1f147b7526b12554a4ea7cd2312a694892459acc.png?1630010761" width="90"> |
 | BACK-END  | <img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white" />  ![Spring](https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white)|
-| FRONT-END  | |
+| FRONT-END  | ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)|
 | storage   | <img src="https://techrecipe.co.kr/wp-content/uploads/2020/08/200824_Google-Drive_001.jpg" width="100">  |
 | 라이브러리| <img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white" />  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTc1aov4a4ONcOBVIXydQjhh5intGt6j8yz5D9vdHe4p-gJAth-jzTUsaMS9cyMpQy66Q&usqp=CAU" width="80">  |
 | WebServer    | <img src="https://images.velog.io/images/dbfudgudals/post/2ec0586e-1d62-475d-85c4-0f78b9d2fc34/image.png" width="100">    |
