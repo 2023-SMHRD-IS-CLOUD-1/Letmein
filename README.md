@@ -103,6 +103,8 @@
 
 # 6. 시스템 아키텍처
 
+![제목을-입력해주세요_-014](https://github.com/2023-SMHRD-IS-CLOUD-1/Letmein/assets/142488306/153acd97-7efd-4569-9ab5-cbe95bde1e3c)
+
 
 
 # 7. 화면 구성
