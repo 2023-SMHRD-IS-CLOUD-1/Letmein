@@ -77,15 +77,22 @@
     <summary>화면구성 보기</summary>
 <!-- summary 아래 한칸 공백 두고 내용 삽입 -->
    
-   #### 메인 페이지 & 로그인 페이지
-   ![1](https://private-user-images.githubusercontent.com/123911778/310374622-c2dec7bb-8382-436e-bea2-68fffd249e22.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDk3MDM5NDAsIm5iZiI6MTcwOTcwMzY0MCwicGF0aCI6Ii8xMjM5MTE3NzgvMzEwMzc0NjIyLWMyZGVjN2JiLTgzODItNDM2ZS1iZWEyLTY4ZmZmZDI0OWUyMi5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwMzA2JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDMwNlQwNTQwNDBaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0xMzc1ZjM0ZmZiNGQyNjZhODE3Yjk2OGJhODgxYWNhNzVkN2QzNzk2NTNiYWJmYmQ4ZTM0N2E3YjliNDZkZmYwJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.q_90DRxW_41yUxdJ9gr2zOq7w2uT7zmuq7sCvgLDcQU)
-   #### 체형 분석 페이지
-   ![2](https://private-user-images.githubusercontent.com/123911778/310374630-48e092a7-104c-45c3-a1a2-19343e89776e.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDk3MDM5NDAsIm5iZiI6MTcwOTcwMzY0MCwicGF0aCI6Ii8xMjM5MTE3NzgvMzEwMzc0NjMwLTQ4ZTA5MmE3LTEwNGMtNDVjMy1hMWEyLTE5MzQzZTg5Nzc2ZS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwMzA2JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDMwNlQwNTQwNDBaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1iYWFkZGEwZjM2NGJiMjZjZDAxYmIzMGUzZDE4MWRmOGM2MGQ5NDdlY2JkZTIwYTY0MWE1MTk4MzVlMDAyOGZjJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.38CQLDa1j81c4OdV5h72NiHmwEgx1DHkn_0zc4uKWTM)
-   ### 가상피팅 페이지 & 커뮤니티 페이지
-   ![3](https://private-user-images.githubusercontent.com/123911778/310374631-24db9259-e153-4006-9eb3-ab21f5d3ece9.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDk3MDM5NDAsIm5iZiI6MTcwOTcwMzY0MCwicGF0aCI6Ii8xMjM5MTE3NzgvMzEwMzc0NjMxLTI0ZGI5MjU5LWUxNTMtNDAwNi05ZWIzLWFiMjFmNWQzZWNlOS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwMzA2JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDMwNlQwNTQwNDBaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1kZGMyZTNmNmVlNzU3YmNjNmFmODBiYWI0YmUyZjFjZWM4NDZmNGQ1MDc3ZGUyMGMzZmYzNDg5YzYzZTA1ZDBjJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.Sf5m0RBegzZxAcq48koupqup0ZJt-Si9H7OuGDTqfQw)
+   #### 7-1 메인 페이지
+   ![제목 없는 동영상 - Clipchamp로 제작](https://github.com/yusuyeon1111/portfolio/assets/142488306/e94a754c-fa5c-4b7a-b925-be1531f704f0)
 
-
+   #### 7-2 회원가입 & 로그인 페이지
+   ![제목 없는 동영상 - Clipchamp로 제작](https://github.com/yusuyeon1111/portfolio/assets/142488306/f06b7c39-26ac-47eb-af1f-bc2d8ed32edc)
    
+   #### 7-3 커뮤니티 페이지
+ ![-Clipchamp3-ezgif com-video-to-gif-converter](https://github.com/yusuyeon1111/portfolio/assets/142488306/b5dfbf08-3f8d-4344-bc32-18f00510663f)
+ 
+   #### 7-4 마이페이지 & 고객센터 페이지
+![-Clipchamp5-ezgif com-video-to-gif-converter](https://github.com/yusuyeon1111/portfolio/assets/142488306/3d90494b-3cd9-4401-8763-cca21fa97364)
+
+#### 7-5 이미지 업로드 & 체형 분석 결과 페이지
+![제목 없는 동영상 - Clipchamp로 제작 (1)](https://github.com/yusuyeon1111/portfolio/assets/142488306/f3d0c30a-822e-4ffa-9381-7b83d1868d7b)
+
+#### 7-6 사이즈 등록 페이지
 </details>
 
 
