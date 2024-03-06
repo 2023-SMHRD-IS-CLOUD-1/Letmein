@@ -101,16 +101,8 @@
 
 
 
-# 6. 개발 내용
-![개발내용](https://private-user-images.githubusercontent.com/123911778/310373076-870be38a-0c15-4ff3-8274-42b18053d1df.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDk3MDM1NDIsIm5iZiI6MTcwOTcwMzI0MiwicGF0aCI6Ii8xMjM5MTE3NzgvMzEwMzczMDc2LTg3MGJlMzhhLTBjMTUtNGZmMy04Mjc0LTQyYjE4MDUzZDFkZi5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwMzA2JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDMwNlQwNTM0MDJaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT00N2M2NWU0ZjEzZDZjMDdjMTQ4M2U5YjJhOWQ0OWZhYjAwN2Q3MjA2ODZiYzdhNzM1ZWI4MzIxM2VkYjE4NTgzJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.CsBWPPRjk1gSPlF0K5B2BH56NRDLTzhzgF2sBA5-wJs)
+# 6. 시스템 아키텍쳐
 
-- 업로드한 사진에서 Face Detecting 수행하여 얼굴부분 추출
-- 추출한 사진에서 Gender Detecting을 사용하여 성별 분류
-- YOLOv8 Segment와 Mediapipe을 사용하여 체형 분석
-- Avatar에 masking, parse, openpose을 수행
-- Cloth에 masking을 수행
-- GMM 모델을 사용하여 옷을 아바타의 크기와 위치에 맞추고 자세에 따라 변형
-- TOM 모델을 사용하여 매끄럽게 처리
 
 
 # 7. 화면 구성
