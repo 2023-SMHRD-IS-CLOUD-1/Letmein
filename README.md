@@ -140,13 +140,14 @@
 </details>
 
 
-# 8. 참고문헌
+
+# 9. 참고문헌
 
 - Virtual Try on을 사용한 가상피팅
 (https://github.com/minar09/cp-vton-plus)
 
 
-# 9. 개발환경
+# 10. 개발환경
 |                     분류 | 설명                                                              |
 |-------------------------:|-------------------------------------------------------------------|
 | 운영체제                 | Windows10                                                         |
@@ -158,14 +159,14 @@
 
 
 
-# 10. 팀원소개
-| <a href="https://github.com/kkksssmmmm"><img src="https://avatars.githubusercontent.com/u/105231826?v=4" width="100px;" height="100px;" alt=""/><br /><sub><b> 팀장 : 김성민</b></sub></a> | <a href="https://github.com/Jinkyun0328"><img src="https://avatars.githubusercontent.com/u/123911778?v=4" width="100px;" alt=""/><br /><sub><b> 부팀장 : 최진균</b></sub></a> | <a href="https://github.com/ggody2"><img src="https://avatars.githubusercontent.com/u/117277864?v=4" width="100px;" alt=""/><br /><sub><b> 팀원 : 유수연</b></sub></a> | <a href="https://github.com/phc1235"><img src="https://avatars.githubusercontent.com/u/142488051?v=4" width="100px;" alt=""/><br /><sub><b> 팀원 : 하동철철</b></sub></a> |
+# 11. 팀원소개
+| <a href="https://github.com/kkksssmmmm"><img src="https://avatars.githubusercontent.com/u/105231826?v=4" width="100px;" height="100px;" alt=""/><br /><sub><b> 팀장 : 김성민</b></sub></a> | <a href="https://github.com/Jinkyun0328"><img src="https://avatars.githubusercontent.com/u/123911778?v=4" width="100px;" alt=""/><br /><sub><b> 부팀장 : 최진균</b></sub></a> | <a href="https://github.com/ggody2"><img src="https://avatars.githubusercontent.com/u/117277864?v=4" width="100px;" alt=""/><br /><sub><b> 팀원 : 유수연</b></sub></a> | <a href="https://github.com/phc1235"><img src="https://avatars.githubusercontent.com/u/142488051?v=4" width="100px;" alt=""/><br /><sub><b> 팀원 : 하동철</b></sub></a> |
 |:----------------:|---------------------|------------------------ |------------------------|
 | 프로젝트 기획     | AI 모델링            | BACK-END 개발           | 데이터 수집 및 전처리    |
 | BACK-END 개발    | AWS 클라우스 서비스   | FRONT-END 개발          | DB 모델링               |
 | FRONT-END 개발   | Flask 서버 구축      |                         |                         |                                            
 
-# 11. 링크
+# 12. 링크
 |                     이름 | 설명                                                              | 링크                                                                |
 |-------------------------:|-------------------------------------------------------------------:|-------------------------------------------------------------------|
 | Letmein                  | Spring Boot  |      https://github.com/2023-SMHRD-IS-CLOUD-1/Letmein/tree/main                                                              |
