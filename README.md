@@ -168,7 +168,11 @@
 - 아바타와 의상의 전처리 과정을 확인하여 잘못되거나 누락된 값을 찾아 수정
 - 성능 개선
 
-## 8-4) Python 라이브러리 호환 문제
+</details>
+
+<details>
+   <summary> 2. 호환 문제 </summary>
+## 8-4) GPU 드라이버와 Python 라이브러리 호환 문제
 - Virtual Try on 모델을 사용할 때 Pytorch 프레임워크를 사용하면서 GPU를 사용.
 - GPU를 사용하기 위한 Cuda, Cudnn, Pytorch와 기타 라이브러리의 버전이 일치하지 않아 문제가 발생
 - 개발시 RTX2070 그래픽 카드로 개발하였으나 배포시 AWS EC2에서는 T80을 사용하여 버전 충돌
