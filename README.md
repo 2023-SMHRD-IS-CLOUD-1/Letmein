@@ -126,16 +126,16 @@
    #### 7-4 마이페이지 & 고객센터 페이지
 ![-Clipchamp5-ezgif com-video-to-gif-converter](https://github.com/yusuyeon1111/portfolio/assets/142488306/3d90494b-3cd9-4401-8763-cca21fa97364)
 
-#### 7-5 이미지 업로드 & 체형 분석 결과 페이지
+   #### 7-5 이미지 업로드 & 체형 분석 결과 페이지
 ![제목 없는 동영상 - Clipchamp로 제작 (1)](https://github.com/yusuyeon1111/portfolio/assets/142488306/f3d0c30a-822e-4ffa-9381-7b83d1868d7b)
 
-#### 7-6 사이즈 등록 페이지
+   #### 7-6 사이즈 등록 페이지
 ![제목 없는 동영상 - Clipchamp로 제작 (1)](https://github.com/yusuyeon1111/portfolio/assets/142488306/f2eb06b4-19fb-4061-9660-477c28c7c9d0)
 
-#### 7-7 아바타 페이지
+   #### 7-7 아바타 페이지
 ![제목 없는 동영상 - Clipchamp로 제작 (3)](https://github.com/yusuyeon1111/portfolio/assets/142488306/7ac9ad8e-718b-4b45-930a-8e6966b6eed4)
 
-#### 7-8 관리자 페이지
+   #### 7-8 관리자 페이지
  ![image](https://github.com/yusuyeon1111/portfolio/assets/142488306/919ebf59-9f54-4013-976c-cf189de56682)
  
 </details>
@@ -194,13 +194,13 @@
 - AWS을 오래 사용하지 않은 계정의 경우 과금을 막기 위해 적은 용량의 신청을 제안한다.
 - P2.xlarge의 경우 하나당 4의 vCPU을 사용하여 8의 vCPU을 신청하여 2개의 EC2을 생성하는데 사용했다.
 
-   ## 8-6) S3 Policy
+## 8-6) S3 Policy
 - AWS의 S3은 데이터를 저장하는 클라우드 저장소이다.
 - S3은 접근 권한을 막기 위한 Policy가 존재하는데 AWS Policy Generator을 사용하여 접근 권한을 부여했다.
 - 모든 사용자에 대하여 S3 접근 권한을 부여하면 저장소의 이름이 url에 그대로 나타나기에
 - CloudFront을 사용하여 url을 변경하였다.
 
-  ## 8-7) EC2에 배포
+## 8-7) EC2에 배포
   ### (1) Spring 배포
 - Spring을 EC2에 배포하기 위해서는 이클립스에서 build을 수행하여 jar 파일을 생성한다.
 - Github에 jar 파일을 올린 다음 EC2에서 git clone을 실행한다.
