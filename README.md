@@ -17,7 +17,20 @@
     <summary>기능 보기</summary>
 
    #### 2-1 체형 분석 기능
+   
    ![제목을-입력해주세요_-001 (1)](https://github.com/2023-SMHRD-IS-CLOUD-1/Letmein/assets/142488306/27ec85ab-81ac-4c5a-ad8d-f1533022278e)
+   
+   ![image](https://github.com/2023-SMHRD-IS-CLOUD-1/Letmein/assets/142488306/b95fe8d5-e11d-410b-8a2a-31f870ac9613)
+
+   - 업로드한 사진에서 Face Detecting 수행하여 얼굴부분 추출
+   - 추출한 사진에서 Gender Detecting을 사용하여 성별 분류
+   - YOLOv8 Segment와 Mediapipe을 사용하여 체형 분석
+   - 어깨와 골반 너비를 비교해 체형 등록 후 해당 체형에 해당하는 아바타 생성 
+     - 어깨 > 골반 : 역삼각형
+     - 어깨 = 골반 : 직사각형/모래시계형
+     - 어깨 < 골반 : 삼각형
+
+   #### 2-2 아바타 페이지
    
 
 
@@ -76,7 +89,7 @@
 - Avatar에 masking, parse, openpose을 수행
 - Cloth에 masking을 수행
 - GMM 모델을 사용하여 옷을 아바타의 크기와 위치에 맞추고 자세에 따라 변형
-- TOM 모델을 사용하여 매끄럽게 처
+- TOM 모델을 사용하여 매끄럽게 처리
 
 
 # 7. 화면 구성
