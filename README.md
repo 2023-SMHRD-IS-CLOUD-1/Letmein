@@ -1,5 +1,5 @@
 # Letmein
-![제목을-입력해주세요_-001 (4)](https://github.com/2023-SMHRD-IS-CLOUD-1/Letmein/assets/142488306/6f6e47bb-d506-4e44-a7ff-ef830f6beb80)
+![제목을-입력해주세요_-001](https://github.com/2023-SMHRD-IS-CLOUD-1/Letmein/assets/142488306/fe4ea166-b409-4659-867d-7cc73c32dd9b)
 
 
 ### 제작 기간 : 23.12.26 ~ 24.02.28
