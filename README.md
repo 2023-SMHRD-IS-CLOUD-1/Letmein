@@ -143,9 +143,38 @@
 # 8. 트러블 슈팅
 <details>
    <summary> 1. 모델링 성능 이슈 </summary>
-   
-- opencv에 내장되어있는 caffe 모델을 사용했을 때 모든 아바타를 남성으로 판단하는 문제가 발생 -> keras로 변경해 98.58%까지 정확도를 개선함.
-- YOLO segment 모델은 사람을 판별하는데 특화된 모델이 아니어서 성능이 높지 않은 문제가 발생함 -> roboflow를 사용해 직접 학습시켜 44.5% 였던 정확도를 92.4%까지 개선함.
+
+<img width="594" alt="스크린샷 2024-03-06 190615" src="https://github.com/2023-SMHRD-IS-CLOUD-1/Letmein/assets/123911778/8f8d05bc-a5b0-4921-b73c-2f2b7cc0b4d8">
+
+## 8-1) 분류 모델 성능 개선
+- OpenCV에 내장되어 있는 caffe 모델을 사용했을 때 모든 아바타를 남성으로 판단하는 문제가 발생
+- Face Detecting을 수행하지 못하거나 짧은 머리의 여성을 남성으로 오분류
+- Face Detecting을 먼저 수행하고 분류 모델을 Tensorflow Keras의 Gender Detecting으로 모델을 변경
+- 98.58%까지 정확도를 개선함
+
+<img width="586" alt="스크린샷 2024-03-06 190623" src="https://github.com/2023-SMHRD-IS-CLOUD-1/Letmein/assets/123911778/9574b02c-6cf7-4319-a1f8-55d2a979adae">
+
+## 8-2) Segment 모델 성능 개선
+- YOLOv8 Segment 모델은 사람을 판별하는데 특화된 모델이 아니어서 사람 이외의 것이 출력되고 성능이 높지 않은 문제 발생
+- Roboflow의 Instance Segment 모델을 사용하여 약 1,000장의 사람 이미지를 데이터로 학습함.
+- 정확도를 44.5%에서 92.4%까지 개선함.
+
+<img width="594" alt="스크린샷 2024-03-06 190646" src="https://github.com/2023-SMHRD-IS-CLOUD-1/Letmein/assets/123911778/b5fa0a1f-7b5f-4739-9577-59422bf92dac">
+
+
+## 8-3) 가상 피팅 모델 성능 개선
+- VTON에서 준비한 데이터셋에서는 Virtual Try on 모델을 사용했을 때 높은 성능을 보임
+- 추가로 준비한 아바타와 의상에 대해서는 옷의 위치가 크기가 맞지 않거나 그림이 뭉게지는 문제가 발생
+- 아바타와 의상의 전처리 과정을 확인하여 잘못되거나 누락된 값을 찾아 수정
+- 성능 개선
+
+## 8-4) Python 라이브러리 호환 문제
+- Virtual Try on 모델을 사용할 때 Pytorch 프레임워크를 사용하면서 GPU를 사용.
+- GPU를 사용하기 위한 Cuda, Cudnn, Pytorch와 기타 라이브러리의 버전이 일치하지 않아 문제가 발생
+- 개발시 RTX2070 그래픽 카드로 개발하였으나 배포시 AWS EC2에서는 T80을 사용하여 버전 충돌
+- T80에 호환되는 NVIDIA-DRIVER-470, CUDA11, Pytorch-1.8로 버전을 바꾸어 사용하여 문제 해결
+
+
 </details>
 
 # 9. 참고문헌
