@@ -17,6 +17,8 @@
     <summary>기능 보기</summary>
 
    #### 2-1 체형 분석 기능
+   ![제목을-입력해주세요_-001 (1)](https://github.com/2023-SMHRD-IS-CLOUD-1/Letmein/assets/142488306/27ec85ab-81ac-4c5a-ad8d-f1533022278e)
+   
 
 
 </details>
