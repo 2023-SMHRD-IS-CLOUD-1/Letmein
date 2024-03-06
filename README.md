@@ -16,7 +16,7 @@
 <details>
     <summary>기능 보기</summary>
 
-   #### 2-1 체형 분석 기능
+   ### 2-1 체형 분석 기능
    
    ![제목을-입력해주세요_-001 (1)](https://github.com/2023-SMHRD-IS-CLOUD-1/Letmein/assets/142488306/27ec85ab-81ac-4c5a-ad8d-f1533022278e)
    
@@ -30,7 +30,7 @@
      - 어깨 = 골반 : 직사각형/모래시계형
      - 어깨 < 골반 : 삼각형
 
-   #### 2-2 아바타 기능
+   ### 2-2 아바타 기능
 
    ![제목을-입력해주세요_-001 (2)](https://github.com/2023-SMHRD-IS-CLOUD-1/Letmein/assets/142488306/1a7a829d-097a-48d1-8713-fc802da35e65)
 
