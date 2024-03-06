@@ -31,7 +31,9 @@
      - 어깨 < 골반 : 삼각형
 
    #### 2-2 아바타 기능
-   
+
+   ![제목을-입력해주세요_-001 (2)](https://github.com/2023-SMHRD-IS-CLOUD-1/Letmein/assets/142488306/1a7a829d-097a-48d1-8713-fc802da35e65)
+
 - Avatar에 masking, parse, openpose을 수행
 - Cloth에 masking을 수행
 - GMM 모델을 사용하여 옷을 아바타의 크기와 위치에 맞추고 자세에 따라 변형
