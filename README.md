@@ -201,7 +201,7 @@
 - CloudFront을 사용하여 url을 변경하였다.
 
   ## 8-7) EC2에 배포
-  ### Spring 배포
+  ### (1) Spring 배포
 - Spring을 EC2에 배포하기 위해서는 이클립스에서 build을 수행하여 jar 파일을 생성한다.
 - Github에 jar 파일을 올린 다음 EC2에서 git clone을 실행한다.
 - EC2에 java을 설치한다.
@@ -209,7 +209,7 @@
 - 배포시 한국 ORACLE과 AWS의 Region 시간이 맞지 않아 timezone region not found 에러가 발생
 - 이클립스에서 timezone을 무시하는 코드를 추가하여 문제 해결
 
-   ### Flask 배포
+   ### (2) Flask 배포
 - github에 Python 코드를 업로드
 - EC2에서 프로젝트를 다운로드
 - 가상환경 구축 후 Python과 Library를 버전에 맞게 설치
@@ -217,7 +217,7 @@
 - Spring과 Flask은 EC2를 꺼도 서버가 유지될 수 있도록 nohub을 사용하여 실행했다.
 - EC2을 실행할 때마다 IP 주소가 달라지는 것을 막기 위해 탄력적 퍼블릭 IP 주소를 할당받았다.
 
-  ### React 배포 (S3)
+  ### (3) React 배포 (S3)
 - VScode에서 npm build을 실행하여 build 폴더를 생성
 - S3에 build 폴더를 업로드한다.
 - S3에서 IP 주소를 받아 접속한다.
