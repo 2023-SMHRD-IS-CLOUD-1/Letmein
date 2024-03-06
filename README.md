@@ -92,18 +92,8 @@
 
 # 8. 참고문헌
 
-- 손톱 검출을 이용한 가상 네일아트문새별* 허훈 오정수 부경대학교
-(https://koreascience.kr/article/CFKO202132348467219.pdf)
-- 행정안전부
-(https://www.localdata.go.kr/main.do)
-- 네일 데이터 정보 논문
-https://blog.naver.com/PostView.naver?blogId=dbsyhe&logNo=222675412974
-- 네일아트 트렌드 기사
-https://cosinkorea.com/mobile/article.html?no=48944
-- 한국대한 신문
-https://news.unn.net/news/articleView.html?idxno=543278
-
-
+- Virtual Try on을 사용한 가상피팅
+(https://github.com/minar09/cp-vton-plus)
 
 
 # 9. 개발환경
@@ -121,9 +111,9 @@ https://news.unn.net/news/articleView.html?idxno=543278
 # 10. 팀원소개
 | <a href="https://github.com/kkksssmmmm"><img src="https://avatars.githubusercontent.com/u/105231826?v=4" width="100px;" height="100px;" alt=""/><br /><sub><b> 팀장 : 김성민</b></sub></a> | <a href="https://github.com/Jinkyun0328"><img src="https://avatars.githubusercontent.com/u/123911778?v=4" width="100px;" alt=""/><br /><sub><b> 부팀장 : 최진균</b></sub></a> | <a href="https://github.com/ggody2"><img src="https://avatars.githubusercontent.com/u/117277864?v=4" width="100px;" alt=""/><br /><sub><b> 팀원 : 이하연</b></sub></a> | <a href="https://github.com/phc1235"><img src="https://avatars.githubusercontent.com/u/142488051?v=4" width="100px;" alt=""/><br /><sub><b> 팀원 : 박형찬</b></sub></a> |
 |:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|--------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------|
-| 프로젝트 기획                                                                                                                                                                              | AI 모델링                                                                                                            | 프론트 디자인 총괄                                                                       | api 수집                                                                                                           | DB 관리                                                                                                               | 로그인서비스                                                                             |
-| 전체 일정관리                                                                                                                                                                              | AWS 클라우스 서비스                                                                                                        | 메인페이지                                                                               | 페이지네이션                                                                                                       | 산출물 작성                                                                                                           | 데이터수집 및 전처리                                                                     |
-| fullcanlendar와 faltpickr API를 <br>이용한 예약관리 기능                                                                                                                                       | Flask 서버 구축                                                                                                          | 마이페이지                                                                               | 회원가입서비스                                                                                크
+| 프로젝트 기획                                                                                                                                                                              | AI 모델링                                                                                                            | BACK-END 개발                                                                             | 데이터 수집 및 전처리                                                                                                           | DB 관리                                                                                                               | 로그인서비스                                                                             |
+| BACK-END 개발                                                                                                                                                                              | AWS 클라우스 서비스                                                                                                        | FRONT-END 개발                                                                               | DB 모델링                                                                                                   | 산출물 작성                                                                                                           | 데이터수집 및 전처리                                                                     | FRONT-END 개발
+|                                                                                                                                  | Flask 서버 구축                                                                                                          | 마이페이지                                                                               |                                                                          
 
 # 11. 링크
 |                     이름 | 설명                                                              | 링크                                                                |
