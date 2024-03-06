@@ -173,7 +173,7 @@
 <details>
    <summary> 2. 호환 문제 </summary>
 
-   ## 8-4) GPU 드라이버와 Python 라이브러리 호환 문제
+## 8-4) GPU 드라이버와 Python 라이브러리 호환 문제
 - Virtual Try on 모델을 사용할 때 Pytorch 프레임워크를 사용하면서 GPU를 사용.
 - GPU를 사용하기 위한 Cuda, Cudnn, Pytorch와 기타 라이브러리의 버전이 일치하지 않아 문제가 발생
 - 개발시 RTX2070 그래픽 카드로 개발하였으나 배포시 AWS EC2에서는 T80을 사용하여 버전 충돌
@@ -187,20 +187,20 @@
 <details>
    <summary> 3. AWS 클라우드 서비스 문제 </summary>
 
-   ## 8-1) EC2에서 GPU 사용
+## 8-5) EC2에서 GPU 사용
 - AWS EC2에서 GPU을 사용하기 위해서는 vCPU을 할당받아야 한다.
 - vCPU은 SUPPORT에서 인스턴스마다 필요한 vCPU을 검색한 다음 필요한만큼 신청이 가능하다.
 - vCPU을 신청하면 AWS에서 검토한 후 약 하루 뒤에 승인한다.
 - AWS을 오래 사용하지 않은 계정의 경우 과금을 막기 위해 적은 용량의 신청을 제안한다.
 - P2.xlarge의 경우 하나당 4의 vCPU을 사용하여 8의 vCPU을 신청하여 2개의 EC2을 생성하는데 사용했다.
 
-   ## 8-2) S3 Policy
+   ## 8-6) S3 Policy
 - AWS의 S3은 데이터를 저장하는 클라우드 저장소이다.
 - S3은 접근 권한을 막기 위한 Policy가 존재하는데 AWS Policy Generator을 사용하여 접근 권한을 부여했다.
 - 모든 사용자에 대하여 S3 접근 권한을 부여하면 저장소의 이름이 url에 그대로 나타나기에
 - CloudFront을 사용하여 url을 변경하였다.
 
-  ## 8-3) EC2에 배포
+  ## 8-7) EC2에 배포
   ### Spring 배포
 - Spring을 EC2에 배포하기 위해서는 이클립스에서 build을 수행하여 jar 파일을 생성한다.
 - Github에 jar 파일을 올린 다음 EC2에서 git clone을 실행한다.
@@ -218,10 +218,10 @@
 - EC2을 실행할 때마다 IP 주소가 달라지는 것을 막기 위해 탄력적 퍼블릭 IP 주소를 할당받았다.
 
   ### React 배포 (S3)
-  - VScode에서 npm build을 실행하여 build 폴더를 생성
-  - S3에 build 폴더를 업로드한다.
-  - S3에서 IP 주소를 받아 접속한다.
-  - 같이 배포한 Spring, Flask와 CORs 문제가 발생하여 CloudFront을 사용하여 문제를 해결했다.
+- VScode에서 npm build을 실행하여 build 폴더를 생성
+- S3에 build 폴더를 업로드한다.
+- S3에서 IP 주소를 받아 접속한다.
+- 같이 배포한 Spring, Flask와 CORs 문제가 발생하여 CloudFront을 사용하여 문제를 해결했다.
 
 </details>
 
